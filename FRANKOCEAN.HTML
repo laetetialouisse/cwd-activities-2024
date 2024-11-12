@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank Ocean</title>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Google Fonts (for better typography) -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Font Awesome for Social Icons -->
+    <script src="https://kit.fontawesome.com/a71dfac3c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #000000;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('frank-ocean.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .hero .parallax-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #008c28;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .btn-large {
+            background-color: #008c28;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-large:hover {
+            background-color: #008c28;
+        }
+
+        /* Section Titles */
+        h2.green-text {
+            color: #008c28;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #121212;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #00bfae;
+            margin-top: 20px;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Music Section */
+        .music .card {
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #121212;
+        }
+
+        .music .card-title {
+            color: #008c28;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .music .card-content p {
+            color: #fff;
+        }
+
+        .music .card-action .btn {
+            background-color: #008c28;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .music .card-action .btn:hover {
+            background-color: #008c28;
+        }
+
+        .music .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Floating Action Button */
+        .fixed-action-btn {
+            bottom: 50px;
+            right: 50px;
+        }
+
+        .fixed-action-btn a {
+            background-color: #008c28;
+        }
+
+        .fixed-action-btn a:hover {
+            background-color: #008c28;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            border-top: 3px solid #008c28;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Navigation */
+        .nav-text {
+            color: white !important;
+        }
+
+        .sidenav {
+            background-color: black !important;
+        }
+
+        .slider .caption h2 {
+            color: #FFA38C;
+        }
+
+        .photo {
+            opacity: 0.4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="black">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="nav-text" href="#home">Home</a></li>
+                    <li><a class="nav-text" href="#profile">Profile</a></li>
+                    <li><a class="nav-text" href="#discography">Discography</a></li>
+                    <li><a class="nav-text" href="#collections">Collections</a></li>
+                    <li><a href="#" class="dropdown-trigger btn black nav-text" data-target="social1"><i class="material-icons right">arrow_drop_down</i>Connect Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dropdown Structure -->
+    <ul id='social1' class='dropdown-content'>
+        <li><a href="https://twitter.com/Frank_Ocean" target="_blank"><i class="fa-brands fa-twitter black-text"></i></a></li>
+        <li><a href="https://www.instagram.com/frank_ocean/" target="_blank"><i class="fa-brands fa-instagram black-text"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCqf-kTp9ERV5T1rPayno7LA" target="_blank"><i class="fa-brands fa-youtube black-text"></i></a></li>
+        <li><a href="https://www.tiktok.com/@frankocean" target="_blank"><i class="fa-brands fa-tiktok black-text"></i></a></li>
+    </ul>
+
+    <!-- Sidenav -->
+    <ul class="sidenav black" id="mobile-demo">
+        <li><a class='white-text nav-text' href="#home">Home</a></li>
+        <li><a class='white-text nav-text' href="#profile">Profile</a></li>
+        <li><a class='white-text nav-text' href="#discography">Discography</a></li>
+        <li><a class='white-text nav-text' href="#collections">Collections</a></li>
+        <li><a href="#" class='dropdown-trigger btn black nav-text left' data-target='social1'><i class="material-icons right">arrow_drop_down</i>Social Media</a></li>
+    </ul>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Frank Ocean</h1>
+            <p class="flow-text">Dive into the world of music, creativity, and soul.</p>
+            <a href="#discography" class="btn-large waves-effect waves-light">Explore Music</a>
+
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="about">
+        <div class="container">
+            <h2 class="green-text">About Frank Ocean</h2>
+            <div class="divider"></div>
+            
+            <!-- Biography Section -->
+            <h3 class="green-text">Biography</h3>
+            <p>Frank Ocean, born Christopher Edwin Breaux on October 28, 1987, in Long Beach, California, is a groundbreaking singer, songwriter, and producer. His music spans various genres, blending elements of R&B, pop, electronic, and experimental sounds. Ocean's soulful, emotionally complex lyrics have garnered widespread acclaim and made him one of the most influential artists of his generation.</p>
+            
+            <!-- Early Life Section -->
+            <h3 class="green-text">Early Life</h3>
+            <p>Ocean grew up in New Orleans, Louisiana, where he was exposed to a wide range of music. He moved to Los Angeles to pursue a career in music, initially working as a ghostwriter for artists in the music industry. His big break came when he released his mixtape "Nostalgia, Ultra" in 2011, which was widely praised for its innovative sound and introspective lyrics.</p>
+
+            <!-- Career Highlights Section -->
+            <h3 class="green-text">Career Highlights</h3>
+            <ul>
+                <li>2011: Released the critically acclaimed mixtape "Nostalgia, Ultra."</li>
+                <li>2012: Released his debut studio album "Channel Orange," which won a Grammy and cemented his place as a musical icon.</li>
+                <li>2016: Released his highly anticipated album "Blonde," which was a commercial and critical success, further expanding his artistic reach.</li>
+                <li>2020: Ocean continued to push boundaries with his experimental projects, including his visual album "Endless."</li>
+            </ul>
+
+            <!-- Artistic Evolution Section -->
+            <h3 class="green-text">Artistic Evolution</h3>
+            <p>Throughout his career, Frank Ocean has constantly evolved both musically and lyrically. His work explores themes of love, identity, and the human experience. With each project, he has challenged traditional genre boundaries, combining R&B, rock, and avant-garde influences into a unique sound that resonates deeply with listeners.</p>
+        </div>
+    </section>
+
+    <!-- Discography Section -->
+    <section id="discography" class="container section music">
+        <h2 class="green-text">Latest Music</h2>
+        <div class="divider"></div>
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="BLOND.JPG" alt="Blonde Album Cover">
+                    </div>
+                    <div class="card-content">
+                        <p>Frank Ocean's critically acclaimed album blending soul, R&B, and experimental sounds.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://open.spotify.com/album/3mH6qwIy9crq0I9YQbOuDf" target="_blank" class="btn waves-effect waves-light">Listen Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="CHANNEL.JPG" alt="Channel Orange Album Cover">
+                    </div>
+                    <div class="card-content">
+                        <p>The debut studio album that defined a new wave of alternative R&B.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://open.spotify.com/album/392p3shh2jkxUxY2VHvlH8" target="_blank" class="btn waves-effect waves-light">Listen Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="ENDLESS.JPG" alt="Endless Album Cover">
+                    </div>
+                    <div class="card-content">
+                        <p>A visual album that showcases Frank's creative vision, blending music and art.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://open.spotify.com/album/4DH7vXyYdLG0OWvnoI48GJ" target="_blank" class="btn waves-effect waves-light">Listen Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="about">
+        <div class="container">
+            <h2 class="green-text">Frank Ocean Collections</h2>
+            <div class="divider"></div>
+            <p>Explore the curated collections of Frank Ocean's limited-edition artwork, exclusive merchandise, and iconic visuals.</p>
+            <div class="row">
+                <!-- Example item -->
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="blondedcollection.jpg" alt="Blonde Collection">
+                        </div>
+                        <div class="card-content">
+                            <p>Exclusive Blonded merchandise.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="https://www.blonded.co/"target="_blank" class="btn waves-effect waves-light">Visit Collection</a>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Frank Ocean. All rights reserved.</p>
+    </footer>
+
+    <!-- Materialize & jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initialize parallax effect
+            $('.parallax').parallax();
+
+            // Initialize sidenav for mobile view
+            $('.sidenav').sidenav();
+
+            // Initialize dropdowns
+            $('.dropdown-trigger').dropdown();
+
+            // Initialize Floating Action Button
+            $('.fixed-action-btn').floatingActionButton({
+                hoverEnabled: false,
+                toolbarEnabled: true
+            });
+        });
+    </script>
+
+</body>
+
+</html>
